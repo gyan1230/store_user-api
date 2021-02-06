@@ -2,6 +2,7 @@ package users
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/gyan1230/store_user-api/utils/errors"
 )
@@ -33,6 +34,8 @@ func (u *User) Save() *errors.RestErr {
 		}
 		return errors.NewNotFoundErr(fmt.Sprintf("User %d already exists.\n", u.ID))
 	}
+	now := time.Now()
+	u.DateCreated = now.Format("19-02-2006T15:04:00Z")
 	userDb[u.ID] = u
 	return nil
 }

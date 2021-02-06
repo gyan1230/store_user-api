@@ -9,10 +9,10 @@ import (
 //User :
 type User struct {
 	ID          int64  `json:"id"`
-	FirstName   string `json:"firstname"`
-	Lastname    string `json:"lastname"`
+	FirstName   string `json:"firs_tname"`
+	Lastname    string `json:"last_name"`
 	Email       string `json:"email"`
-	DateCreated string `json:"date"`
+	DateCreated string `json:"date_created"`
 }
 
 //Validate :
