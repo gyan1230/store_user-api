@@ -15,7 +15,8 @@ func mapUrls() {
 		})
 	})
 	// api.GET("/user", users.GetAllUser)
-	api.GET("/user/:user_id", users.GetUser)
 	api.POST("/create", users.CreateUser)
+	api.GET("/user/:user_id", users.GetUser)
+	api.PUT("/user/:user_id", users.UpdateUser)
 
 }
